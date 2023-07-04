@@ -1,0 +1,8 @@
+node {
+  stage('Run Nginx') {
+kubeconfig(credentialsId: 'kubconfig', serverUrl: 'https://192.168.39.110:8443') {
+
+      sh 'kubectl run mynginx --image=nginx'
+    }
+  }
+}
