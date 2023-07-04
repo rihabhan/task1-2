@@ -1,0 +1,20 @@
+Started by user rihab
+[Pipeline] Start of Pipeline
+[Pipeline] node (hide)
+Running on Jenkins in /var/lib/jenkins/workspace/RunNginxPod
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Run Nginx)
+[Pipeline] kubeconfig
+[Pipeline] {
+[Pipeline] sh
++ kubectl run mynginx --image=nginx
+pod/mynginx created
+[Pipeline] }
+[Pipeline] // kubeconfig
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Finished: SUCCESS
