@@ -1,0 +1,11 @@
+pipeline {
+  agent any
+
+  stages {
+    stage('Run Nginx pod with ansible ') {
+      steps {
+          ansiblePlaybook installation: 'Ansible', inventory: '/etc/ansible/hosts', playbook: '/home/rihab/ansible-test/deploy_nginx.yml'
+      }
+    }
+  }
+}
