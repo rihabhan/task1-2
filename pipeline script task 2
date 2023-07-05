@@ -4,8 +4,8 @@ pipeline {
   stages {
     stage('Run Nginx pod with ansible ') {
       steps {
-          ansiblePlaybook installation: 'Ansible', inventory: '/etc/ansible/hosts', playbook: '/home/rihab/ansible-test/deploy_nginx.yml'
-      }
+        ansiblePlaybook credentialsId: 'ssh', disableHostKeyChecking: true, installation: 'Ansible', inventory: '/etc/ansible/hosts', playbook: '/home/rihab/deploy_nginx.yml'
+        }
     }
   }
 }
