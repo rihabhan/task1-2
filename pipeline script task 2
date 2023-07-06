@@ -1,10 +1,15 @@
 pipeline {
   agent any
-
   stages {
-    stage('Run Nginx pod with ansible ') {
-      steps {
-        ansiblePlaybook credentialsId: 'ssh', disableHostKeyChecking: true, installation: 'Ansible', inventory: '/etc/ansible/hosts', playbook: '/home/rihab/deploy_nginx.yml'
+    stage('SCM Checkout')
+      {
+            steps{
+               git branch: 'main', url: 'https://github.com/rihabhan/test.git' 
+            }
+        }
+        stage('Run Nginx pod with ansible ') {
+        steps {
+          sh 'ansible-playbook -i hosts.yml deploy_nginx.yml'
         }
     }
   }
