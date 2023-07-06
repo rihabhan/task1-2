@@ -1,17 +1,13 @@
 Started by user rihab
 [Pipeline] Start of Pipeline
-[Pipeline] node (hide)
-Running on Jenkins in /var/lib/jenkins/workspace/RunNginxPod
+[Pipeline] node
+Running on Jenkins in /var/lib/jenkins/workspace/NgnixpodwithKubectl
 [Pipeline] {
 [Pipeline] stage
-[Pipeline] { (Run Nginx)
-[Pipeline] kubeconfig
-[Pipeline] {
+[Pipeline] { (Nginx Pod)
 [Pipeline] sh
-+ kubectl run mynginx --image=nginx
-pod/mynginx created
-[Pipeline] }
-[Pipeline] // kubeconfig
++ kubectl run my-nginx-pod --image=nginx
+pod/my-nginx-pod created
 [Pipeline] }
 [Pipeline] // stage
 [Pipeline] }
