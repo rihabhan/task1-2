@@ -4,5 +4,5 @@
   gather_facts: false
   tasks:
     - name: Create Nginx Pod
-      command: kubectl run nginx-pod --image=nginx
-  
+      command: kubectl run mynginx-pod-withansible-fromgithub --image=nginx
+
